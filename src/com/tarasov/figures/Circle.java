@@ -9,13 +9,17 @@ public class Circle extends AbstractFigure{
     }
 
     @Override
-    public double findPerimeter() {
-        return Math.ceil((2 * Math.PI * r) * scale) / scale;
+    public void findPerimeter() {
+        System.out.println(Math.ceil((2 * Math.PI * r) * scale) / scale);
     }
 
     @Override
-    public double findArea() {
+    public void findArea() {
+        System.out.println(Math.ceil((Math.PI * r * r) * scale) / scale);
+    }
 
-        return Math.ceil((Math.PI * r * r) * scale) / scale;
+    @Override
+    public String getFigureName() {
+        return "Окружность";
     }
 }

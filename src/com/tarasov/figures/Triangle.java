@@ -12,13 +12,18 @@ public class Triangle extends AbstractFigure{
     }
 
     @Override
-    public double findPerimeter() {
+    public void findPerimeter() {
         double scale = Math.pow(10, 2);
-        return Math.ceil((3 * side) * scale) / scale;
+        System.out.println(Math.ceil((3 * side) * scale) / scale);
     }
 
     @Override
-    public double findArea() {
-        return 0.5 * base * height;
+    public void findArea() {
+        System.out.println(0.5 * base * height);
+    }
+
+    @Override
+    public String getFigureName() {
+        return "Треугольник";
     }
 }

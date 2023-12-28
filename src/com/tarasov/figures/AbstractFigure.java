@@ -1,6 +1,9 @@
 package com.tarasov.figures;
 
 public abstract class AbstractFigure {
-    public abstract double findPerimeter();
-    public abstract double findArea();
+    public abstract void findPerimeter();
+    public abstract void findArea();
+
+    public abstract String getFigureName();
+
 }

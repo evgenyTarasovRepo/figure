@@ -10,12 +10,17 @@ public class Rectangle extends AbstractFigure{
     }
 
     @Override
-    public double findPerimeter() {
-        return 2 * (sideA + sideB);
+    public void findPerimeter() {
+        System.out.println(2 * (sideA + sideB));
     }
 
     @Override
-    public double findArea() {
-        return sideA * sideB;
+    public void findArea() {
+        System.out.println(sideA * sideB);
+    }
+
+    @Override
+    public String getFigureName() {
+        return "Прямоугольник";
     }
 }
