@@ -1,5 +1,8 @@
 package com.tarasov.figures;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
 public class Rectangle extends AbstractFigure{
     private Double sideA;
     private Double sideB;
@@ -11,12 +14,14 @@ public class Rectangle extends AbstractFigure{
 
     @Override
     public void findPerimeter() {
-        System.out.println(2 * (sideA + sideB));
+        BigDecimal res = BigDecimal.valueOf(2 * (sideA + sideB));
+        System.out.println(res.setScale(2, RoundingMode.CEILING));
     }
 
     @Override
     public void findArea() {
-        System.out.println(sideA * sideB);
+        BigDecimal res = BigDecimal.valueOf(sideA * sideB);
+        System.out.println(res.setScale(2, RoundingMode.CEILING));
     }
 
     @Override

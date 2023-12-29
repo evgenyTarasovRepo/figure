@@ -1,5 +1,8 @@
 package com.tarasov.figures;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
 public class Triangle extends AbstractFigure{
     private Double base;
     private Double height;
@@ -13,13 +16,14 @@ public class Triangle extends AbstractFigure{
 
     @Override
     public void findPerimeter() {
-        double scale = Math.pow(10, 2);
-        System.out.println(Math.ceil((3 * side) * scale) / scale);
+        BigDecimal res = BigDecimal.valueOf(3 * side);
+        System.out.println(res.setScale(2, RoundingMode.CEILING));
     }
 
     @Override
     public void findArea() {
-        System.out.println(0.5 * base * height);
+        BigDecimal res = BigDecimal.valueOf(0.5 * base * height);
+        System.out.println(res.setScale(2, RoundingMode.CEILING));
     }
 
     @Override
